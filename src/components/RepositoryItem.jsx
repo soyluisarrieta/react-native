@@ -9,7 +9,7 @@ function RepositoryItemHeader ({ ownerAvatarUrl, fullName, description, language
       <View style={{ paddingRight: 10 }}>
         <Image style={styles.image} source={{ uri: ownerAvatarUrl }} />
       </View>
-      <View style={{ flexGrow: 1 }}>
+      <View style={{ flex: 1 }}>
         <StyledText fontWeight='bold'>{fullName}</StyledText>
         <StyledText color='muted'>{description}</StyledText>
         <StyledText style={styles.language}>{language}</StyledText>

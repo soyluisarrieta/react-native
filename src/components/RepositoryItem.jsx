@@ -1,34 +1,6 @@
 import { StyleSheet, View } from 'react-native'
 import StyledText from './StyledText'
-
-function parseThousands (value) {
-  return value >= 1000
-    ? `${Math.round(value / 100) / 10}k`
-    : String(value)
-}
-
-function RepositoryStats ({ stargazersCount, forksCount, reviewCount, ratingAverage }) {
-  return (
-    <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-      <View>
-        <StyledText align='center' fontWeight='bold'>Stars</StyledText>
-        <StyledText align='center'>{parseThousands(stargazersCount)}</StyledText>
-      </View>
-      <View>
-        <StyledText align='center' fontWeight='bold'>Forks</StyledText>
-        <StyledText align='center'>{parseThousands(forksCount)}</StyledText>
-      </View>
-      <View>
-        <StyledText align='center' fontWeight='bold'>Review</StyledText>
-        <StyledText align='center'>{parseThousands(reviewCount)}</StyledText>
-      </View>
-      <View>
-        <StyledText align='center' fontWeight='bold'>Rating</StyledText>
-        <StyledText align='center'>{parseThousands(ratingAverage)}</StyledText>
-      </View>
-    </View>
-  )
-}
+import RepositoryStats from './RepositoryStats'
 
 function RepositoryItem (props) {
   return (

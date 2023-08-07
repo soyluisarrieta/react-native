@@ -8,7 +8,7 @@ function RepositoryList () {
       data={repositories}
       ItemSeparatorComponent={() => <Text />}
       renderItem={({ item }) => (
-        <RepositoryItem item={item} />
+        <RepositoryItem {...item} />
       )}
     />
   )

@@ -1,26 +1,36 @@
 import { StyleSheet, View } from 'react-native'
 import StyledText from './StyledText'
 
-function RepositoryItem ({ item }) {
-  const {
-    id,
-    fullName,
-    description,
-    language,
-    stargazersCount,
-    forksCount,
-    reviewCount,
-    ratingAverage
-  } = item
+function RepositoryStats ({ stargazersCount, forksCount, reviewCount, ratingAverage }) {
   return (
-    <View key={id} style={styles.container}>
-      <StyledText fontWeight='bold' fontSize='subheading'>FullName: {fullName}</StyledText>
-      <StyledText>Description: {description}</StyledText>
-      <StyledText>Language: {language}</StyledText>
-      <StyledText>Stars: {stargazersCount}</StyledText>
-      <StyledText>Forks: {forksCount}</StyledText>
-      <StyledText>Review: {reviewCount}</StyledText>
-      <StyledText>Rating: {ratingAverage}</StyledText>
+    <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+      <View>
+        <StyledText align='center' fontWeight='bold'>Stars</StyledText>
+        <StyledText align='center'>{stargazersCount}</StyledText>
+      </View>
+      <View>
+        <StyledText align='center' fontWeight='bold'>Forks</StyledText>
+        <StyledText align='center'>{forksCount}</StyledText>
+      </View>
+      <View>
+        <StyledText align='center' fontWeight='bold'>Review</StyledText>
+        <StyledText align='center'>{reviewCount}</StyledText>
+      </View>
+      <View>
+        <StyledText align='center' fontWeight='bold'>Rating</StyledText>
+        <StyledText align='center'>{ratingAverage}</StyledText>
+      </View>
+    </View>
+  )
+}
+
+function RepositoryItem (props) {
+  return (
+    <View key={props.id} style={styles.container}>
+      <StyledText fontWeight='bold' fontSize='subheading'>FullName: {props.fullName}</StyledText>
+      <StyledText>Description: {props.description}</StyledText>
+      <StyledText>Language: {props.language}</StyledText>
+      <RepositoryStats {...props} />
     </View>
   )
 }

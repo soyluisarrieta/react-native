@@ -6,20 +6,20 @@ function RepositoryStats ({ stargazersCount, forksCount, reviewCount, ratingAver
   return (
     <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
       <View>
-        <StyledText align='center'>{parseThousands(stargazersCount)}</StyledText>
-        <StyledText align='center' fontWeight='bold'>Stars</StyledText>
+        <StyledText align='center' fontWeight='bold'>{parseThousands(stargazersCount)}</StyledText>
+        <StyledText align='center'>Stars</StyledText>
       </View>
       <View>
-        <StyledText align='center'>{parseThousands(forksCount)}</StyledText>
-        <StyledText align='center' fontWeight='bold'>Forks</StyledText>
+        <StyledText align='center' fontWeight='bold'>{parseThousands(forksCount)}</StyledText>
+        <StyledText align='center'>Forks</StyledText>
       </View>
       <View>
-        <StyledText align='center'>{parseThousands(reviewCount)}</StyledText>
-        <StyledText align='center' fontWeight='bold'>Review</StyledText>
+        <StyledText align='center' fontWeight='bold'>{parseThousands(reviewCount)}</StyledText>
+        <StyledText align='center'>Review</StyledText>
       </View>
       <View>
-        <StyledText align='center'>{parseThousands(ratingAverage)}</StyledText>
-        <StyledText align='center' fontWeight='bold'>Rating</StyledText>
+        <StyledText align='center' fontWeight='bold'>{parseThousands(ratingAverage)}</StyledText>
+        <StyledText align='center'>Rating</StyledText>
       </View>
     </View>
   )

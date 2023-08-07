@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import StyledText from './StyledText'
 
 function RepositoryItem ({ item }) {
   const {
@@ -13,14 +14,14 @@ function RepositoryItem ({ item }) {
   } = item
   return (
     <View key={id} style={styles.container}>
-      <Text style={styles.strong}>Id: {id}</Text>
-      <Text>FullName: {fullName}</Text>
-      <Text>Description: {description}</Text>
-      <Text>Language: {language}</Text>
-      <Text>Stars: {stargazersCount}</Text>
-      <Text>Forks: {forksCount}</Text>
-      <Text>Review: {reviewCount}</Text>
-      <Text>Rating: {ratingAverage}</Text>
+      <StyledText bold>Id: {id}</StyledText>
+      <StyledText orange>FullName: {fullName}</StyledText>
+      <StyledText bold>Description: {description}</StyledText>
+      <StyledText orange>Language: {language}</StyledText>
+      <StyledText small>Stars: {stargazersCount}</StyledText>
+      <StyledText small>Forks: {forksCount}</StyledText>
+      <StyledText small>Review: {reviewCount}</StyledText>
+      <StyledText small>Rating: {ratingAverage}</StyledText>
     </View>
   )
 }

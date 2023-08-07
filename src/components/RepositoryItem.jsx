@@ -14,14 +14,13 @@ function RepositoryItem ({ item }) {
   } = item
   return (
     <View key={id} style={styles.container}>
-      <StyledText bold>Id: {id}</StyledText>
-      <StyledText orange>FullName: {fullName}</StyledText>
-      <StyledText bold>Description: {description}</StyledText>
-      <StyledText orange>Language: {language}</StyledText>
-      <StyledText small>Stars: {stargazersCount}</StyledText>
-      <StyledText small>Forks: {forksCount}</StyledText>
-      <StyledText small>Review: {reviewCount}</StyledText>
-      <StyledText small>Rating: {ratingAverage}</StyledText>
+      <StyledText fontWeight='bold' fontSize='subheading'>FullName: {fullName}</StyledText>
+      <StyledText>Description: {description}</StyledText>
+      <StyledText>Language: {language}</StyledText>
+      <StyledText>Stars: {stargazersCount}</StyledText>
+      <StyledText>Forks: {forksCount}</StyledText>
+      <StyledText>Review: {reviewCount}</StyledText>
+      <StyledText>Rating: {ratingAverage}</StyledText>
     </View>
   )
 }

@@ -2,6 +2,7 @@ import { Formik, useField } from 'formik'
 import { Button, StyleSheet, View } from 'react-native'
 import StyledInput from '../components/StyledInput'
 import StyledText from '../components/StyledText'
+import { loginValidationSchema } from '../validationSchemas/login'
 
 const initialValues = {
   email: '',
@@ -56,6 +57,7 @@ function validate (values) {
 function Login () {
   return (
     <Formik
+      validationSchema={loginValidationSchema}
       validate={validate}
       initialValues={initialValues}
       onSubmit={values => console.log(values)}

@@ -5,15 +5,15 @@ import useRepositories from '../hooks/useRepositories.js'
 function RepositoryList () {
   const { repositories } = useRepositories()
 
-  return (
-    <FlatList
-      data={repositories}
-      ItemSeparatorComponent={() => <Text />}
-      renderItem={({ item }) => (
-        <RepositoryItem {...item} />
-      )}
-    />
-  )
+  return repositories
+    ? (<FlatList
+        data={repositories}
+        ItemSeparatorComponent={() => <Text />}
+        renderItem={({ item }) => (
+          <RepositoryItem {...item} />
+        )}
+       />)
+    : (<Text style={{ textAlign: 'center', marginTop: 10 }}>No repositories found...</Text>)
 }
 
 export default RepositoryList

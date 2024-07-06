@@ -29,8 +29,8 @@ export const SPACING: Spacing = {
   space_28: 28,
   space_30: 30,
   space_32: 32,
-  space_36: 36,
-};
+  space_36: 36
+}
 
 interface Color {
   primaryRedHex: string;
@@ -59,8 +59,8 @@ export const COLORS: Color = {
   secondaryLightGreyHex: '#AEAEAE',
   primaryWhiteHex: '#FFFFFF',
   primaryBlackRGBA: 'rgba(12,15,20,0.5)',
-  secondaryBlackRGBA: 'rgba(0,0,0,0.7)',
-};
+  secondaryBlackRGBA: 'rgba(0,0,0,0.7)'
+}
 
 interface FontFamily {
   poppins_black: string;
@@ -83,8 +83,8 @@ export const FONTFAMILY: FontFamily = {
   poppins_medium: 'Poppins-Medium',
   poppins_regular: 'Poppins-Regular',
   poppins_semibold: 'Poppins-SemiBold',
-  poppins_thin: 'Poppins-Thin',
-};
+  poppins_thin: 'Poppins-Thin'
+}
 
 interface FontSize {
   size_8: number;
@@ -109,8 +109,8 @@ export const FONTSIZE: FontSize = {
   size_20: 20,
   size_24: 24,
   size_28: 28,
-  size_30: 30,
-};
+  size_30: 30
+}
 
 interface BorderRadius {
   radius_4: number;
@@ -127,5 +127,5 @@ export const BORDERRADIUS: BorderRadius = {
   radius_10: 10,
   radius_15: 15,
   radius_20: 20,
-  radius_25: 25,
-};
+  radius_25: 25
+}

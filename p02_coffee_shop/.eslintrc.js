@@ -50,6 +50,7 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-unused-vars': ['error'],
+    "react/no-unstable-nested-components": 'off',
 
     // Desactiva Prettier
     'prettier/prettier': 'off'

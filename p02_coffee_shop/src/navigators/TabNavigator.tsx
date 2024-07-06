@@ -7,8 +7,17 @@ import FavoritesScreen from '../screens/FavoritesScreen'
 import OrderHistoryScreen from '../screens/OrderHistoryScreen'
 import { COLORS } from '../theme/theme'
 import { BlurView } from '@react-native-community/blur'
+import Customicon from '../components/CustomIcon'
 
 const Tab = createBottomTabNavigator()
+
+const IconButtonTab = ({name,focused}: {name: string, focused: boolean}) => (
+  <Customicon
+    name={name}
+    size={25}
+    color={ focused ? COLORS.primaryOrangeHex: COLORS.primaryLightGreyHex }
+  />
+)
 
 export default function TabNavigator () {
   return (
@@ -27,10 +36,42 @@ export default function TabNavigator () {
         )
       }}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Cart" component={CartScreen} />
-      <Tab.Screen name="Favorite" component={FavoritesScreen} />
-      <Tab.Screen name="History" component={OrderHistoryScreen} />
+      <Tab.Screen 
+        name="Home"
+        component={HomeScreen} 
+        options={{
+          tabBarIcon: ({ focused, color, size }) => (
+            IconButtonTab({ name: 'home', focused })
+          )
+        }}
+      />
+      <Tab.Screen 
+        name="Cart"
+        component={CartScreen} 
+        options={{
+          tabBarIcon: ({ focused, color, size }) => (
+            IconButtonTab({ name: 'cart', focused })
+          )
+        }}
+      />
+      <Tab.Screen 
+        name="Favorite"
+        component={FavoritesScreen} 
+        options={{
+          tabBarIcon: ({ focused, color, size }) => (
+            IconButtonTab({ name: 'like', focused })
+          )
+        }}
+      />
+      <Tab.Screen 
+        name="History"
+        component={OrderHistoryScreen} 
+        options={{
+          tabBarIcon: ({ focused, color, size }) => (
+            IconButtonTab({ name: 'bell', focused })
+          )
+        }}
+      />
     </Tab.Navigator>
   )
 }

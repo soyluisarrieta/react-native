@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../theme/theme'
+import GradiendBGIcon from './GradiendBGIcon'
+import ProfilePic from './ProfilePic'
 
 interface HeaderBarProps {
   title?: string
@@ -9,7 +11,13 @@ interface HeaderBarProps {
 export default function HeaderBar ({ title }: HeaderBarProps) {
   return (
     <View style={styles.HeaderContainer}>
+      <GradiendBGIcon
+        name="menu"
+        color={COLORS.primaryLightGreyHex}
+        size={FONTSIZE.size_16}
+      />
       <Text style={styles.HeaderText}>{title}</Text>
+      <ProfilePic />
     </View>
   )
 }

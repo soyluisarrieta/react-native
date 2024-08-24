@@ -1,118 +1,88 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import * as React from 'react';
+import {StyleSheet, View, Button, FlatList} from 'react-native';
+import {ArViewerView} from 'react-native-ar-viewer';
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+const models = [
+  {
+    id: '1',
+    name: 'Fruit Tart (1k)(glb)',
+    file: 'fruit_tart_1k.glb',
+  },
+  {
+    id: '2',
+    name: 'Fruit Tart (4k)(glb)',
+    file: 'fruit_tart_4k.glb',
+  },
+  {
+    id: '3',
+    name: 'Fruit Tart (8k)(glb)',
+    file: 'fruit_tart_8k.glb',
+  },
+  {
+    id: '4',
+    name: 'Galletas (1k)(glb)',
+    file: 'sprinkle_cookies_1k.glb',
+  },
+  {
+    id: '5',
+    name: 'Galletas (4k)(glb)',
+    file: 'sprinkle_cookies_4k.glb',
+  },
+  {
+    id: '6',
+    name: 'Galletas (8k)(glb)',
+    file: 'sprinkle_cookies_8k.glb',
+  },
+];
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+export default function App() {
+  const [selectedModel, setSelectedModel] = React.useState<string | null>(null);
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+  const renderItem = ({item}: {item: (typeof models)[0]}) => (
+    <Button
+      title={item.name}
+      onPress={() =>
+        setSelectedModel(`file:///android_asset/custom/${item.file}`)
+      }
+    />
+  );
 
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+    <View style={styles.container}>
+      <FlatList
+        data={models}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+        style={styles.list}
+      />
+      {selectedModel && (
+        <ArViewerView
+          model={selectedModel}
+          style={styles.arView}
+          disableInstantPlacement
+          manageDepth
+          allowRotate
+          allowScale
+          allowTranslate
+          onStarted={() => console.log('Iniciado')}
+          onEnded={() => console.log('Finalizado')}
+          onModelPlaced={() => console.log('Modelo mostrado')}
+          onModelRemoved={() => console.log('Modelo ya no es visible')}
+        />
+      )}
     </View>
   );
 }
 
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
-
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
+    backgroundColor: '#111111',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  list: {
+    flex: 1,
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  arView: {
+    flex: 2,
   },
 });
-
-export default App;

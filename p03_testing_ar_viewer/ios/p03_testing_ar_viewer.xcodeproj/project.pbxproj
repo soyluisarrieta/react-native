@@ -14,6 +14,12 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-p03_testing_ar_viewer-p03_testing_ar_viewerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-p03_testing_ar_viewer-p03_testing_ar_viewerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		E6C03769D83E4AF896F6C04C /* fruit_tart_1k.glb in Resources */ = {isa = PBXBuildFile; fileRef = E6A05E9E6EC447ACA7084BE3 /* fruit_tart_1k.glb */; };
+		943429F858F544AD8582D5A3 /* fruit_tart_4k.glb in Resources */ = {isa = PBXBuildFile; fileRef = DA9E0AC7D783424894C6307C /* fruit_tart_4k.glb */; };
+		9F16FD3BE3ED4E6E930BE73A /* fruit_tart_8k.glb in Resources */ = {isa = PBXBuildFile; fileRef = BB77D60C2669475E94E6D603 /* fruit_tart_8k.glb */; };
+		39ACB50B0D244B84B2D9AF2F /* sprinkle_cookies_1k.glb in Resources */ = {isa = PBXBuildFile; fileRef = F666DDEEF9324004AF60A78F /* sprinkle_cookies_1k.glb */; };
+		43870ACF3B494E20A556148A /* sprinkle_cookies_4k.glb in Resources */ = {isa = PBXBuildFile; fileRef = 5F42EE55E9174A0980F4081C /* sprinkle_cookies_4k.glb */; };
+		DCB44C775ECD4B7F99D7BE1F /* sprinkle_cookies_8k.glb in Resources */ = {isa = PBXBuildFile; fileRef = A336EA684965412AA4266A5C /* sprinkle_cookies_8k.glb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,12 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = p03_testing_ar_viewer/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-p03_testing_ar_viewer-p03_testing_ar_viewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-p03_testing_ar_viewer-p03_testing_ar_viewerTests.release.xcconfig"; path = "Target Support Files/Pods-p03_testing_ar_viewer-p03_testing_ar_viewerTests/Pods-p03_testing_ar_viewer-p03_testing_ar_viewerTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		E6A05E9E6EC447ACA7084BE3 /* fruit_tart_1k.glb */ = {isa = PBXFileReference; name = "fruit_tart_1k.glb"; path = "../assets/3DModels/fruit_tart_1k.glb"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DA9E0AC7D783424894C6307C /* fruit_tart_4k.glb */ = {isa = PBXFileReference; name = "fruit_tart_4k.glb"; path = "../assets/3DModels/fruit_tart_4k.glb"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BB77D60C2669475E94E6D603 /* fruit_tart_8k.glb */ = {isa = PBXFileReference; name = "fruit_tart_8k.glb"; path = "../assets/3DModels/fruit_tart_8k.glb"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F666DDEEF9324004AF60A78F /* sprinkle_cookies_1k.glb */ = {isa = PBXFileReference; name = "sprinkle_cookies_1k.glb"; path = "../assets/3DModels/sprinkle_cookies_1k.glb"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5F42EE55E9174A0980F4081C /* sprinkle_cookies_4k.glb */ = {isa = PBXFileReference; name = "sprinkle_cookies_4k.glb"; path = "../assets/3DModels/sprinkle_cookies_4k.glb"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A336EA684965412AA4266A5C /* sprinkle_cookies_8k.glb */ = {isa = PBXFileReference; name = "sprinkle_cookies_8k.glb"; path = "../assets/3DModels/sprinkle_cookies_8k.glb"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				EAC362DCEC894583AEF845DD /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -149,6 +162,20 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		EAC362DCEC894583AEF845DD /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				E6A05E9E6EC447ACA7084BE3 /* fruit_tart_1k.glb */,
+				DA9E0AC7D783424894C6307C /* fruit_tart_4k.glb */,
+				BB77D60C2669475E94E6D603 /* fruit_tart_8k.glb */,
+				F666DDEEF9324004AF60A78F /* sprinkle_cookies_1k.glb */,
+				5F42EE55E9174A0980F4081C /* sprinkle_cookies_4k.glb */,
+				A336EA684965412AA4266A5C /* sprinkle_cookies_8k.glb */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +272,12 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				E6C03769D83E4AF896F6C04C /* fruit_tart_1k.glb in Resources */,
+				943429F858F544AD8582D5A3 /* fruit_tart_4k.glb in Resources */,
+				9F16FD3BE3ED4E6E930BE73A /* fruit_tart_8k.glb in Resources */,
+				39ACB50B0D244B84B2D9AF2F /* sprinkle_cookies_1k.glb in Resources */,
+				43870ACF3B494E20A556148A /* sprinkle_cookies_4k.glb in Resources */,
+				DCB44C775ECD4B7F99D7BE1F /* sprinkle_cookies_8k.glb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

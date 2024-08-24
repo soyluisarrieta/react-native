@@ -1,0 +1,29 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/3DModels/fruit_tart_1k.glb",
+      "sha1": "9ab11b23a87e21f4785fe121e6ebb991292ed303"
+    },
+    {
+      "path": "assets/3DModels/fruit_tart_4k.glb",
+      "sha1": "951645b8b12c81fe62d5c73ad460d4293e880662"
+    },
+    {
+      "path": "assets/3DModels/fruit_tart_8k.glb",
+      "sha1": "7ec0e7c491565685b179415e0488ce3384d85478"
+    },
+    {
+      "path": "assets/3DModels/sprinkle_cookies_1k.glb",
+      "sha1": "1c916d1e7971d5417b1f0d02bdf0071058ebebf5"
+    },
+    {
+      "path": "assets/3DModels/sprinkle_cookies_4k.glb",
+      "sha1": "f25bcbeab1e997a4e056d3802e4bbd54c63af7f5"
+    },
+    {
+      "path": "assets/3DModels/sprinkle_cookies_8k.glb",
+      "sha1": "8a0a73635bdf682caa82600afdac7575983ce01a"
+    }
+  ]
+}
